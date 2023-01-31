@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
+
+:root {
+    --cor-primaria: #170055;
+    --cor-secundaria: #3E00FF;
+    --cor-terciaria: #AE00FB;
+    --cor-quaternaria: #B5FFD9;
+    --hover: #3d5f7c75;
+
+    --fonte-titulo:'Barlow', sans-serif;
+    --fonte-paragrafo: 'News Cycle', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho__menu {
+    display: flex;
+}
+
+.cabecalho__menu__link {
+    color: var(--cor-quaternaria);
+    gap: 10%;
+    padding: 2% 0 0 5%;
+    font-family: var(--fonte-titulo);
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(background.jpg);
+    box-sizing: border-box;
+}
+
+.base {
+    margin: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.base__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 500px;
+
+}
+
+.base__texto__titulo {
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-titulo);
+    font-size: 2.4rem;
+}
+
+.base__texto__paragrafo {
+    color: var(--cor-quaternaria);
+    font-family: var(--fonte-paragrafo);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.minhas__redes {
+    text-align: center;
+    color: var(--cor-quaternaria);
+    font-family: var(--fonte-paragrafo);
+    font-size: 1rem;
+}
+
+.base__links {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.base__links__link {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color:var(--cor-terciaria);
+    color: var(--cor-terciaria);
+    padding: 3% 10%;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.base__links__link:hover {
+    background-color: var(--hover);
+}
+
+.imagem {
+    width: 40%;
+    height: 40%;
+    border: solid 2px var(--cor-terciaria);
+}
+.rodape {
+    color: var(--cor-quaternaria);
+    background-color: var(--cor-secundaria);
+    padding: 15px;
+    text-align: center;
+}
+
+@media (max-width:1020px) {
+    .cabecalho__menu {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cabecalho__menu__link {
+        padding: 5%;
+    }
+
+    .base {
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+
+    .base__texto {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .base__links {
+        justify-content: center;
+        gap: 5%;
+    }
+}
